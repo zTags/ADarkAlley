@@ -10,12 +10,6 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:../../ADarkAlley.Data/bin/Release/netstandard2.0/ADarkAlley.Data.dll
 
 #---------------------------------- Content ---------------------------------#
-
-#begin Levels/LevelIntro.xml
-/importer:XmlImporter
-/processor:PassThroughProcessor 
-/build:Levels/LevelIntro.xml
 

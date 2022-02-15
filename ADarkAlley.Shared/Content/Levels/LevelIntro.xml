@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+  <Asset Type="ADarkAlley.Data.Level">
+
+    <Name>Intro</Name>
+    <ID>1</ID>
+
+    <Objects>
+      <Item>
+        <X>0</X>
+        <Y>0</Y>
+        <ObjectID>0</ObjectID>
+      </Item>
+    </Objects>
+    
+  </Asset>
+</XnaContent>

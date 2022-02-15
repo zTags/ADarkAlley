@@ -1,3 +1,5 @@
+# object and binaries
+
 /ADarkAlley.Shared/bin
 /ADarkAlley.Shared/obj
 /ADarkAlley.Shared/Content/bin
@@ -6,6 +8,12 @@
 /ADarkAlley.DesktopGL/bin
 /ADarkAlley.DesktopGL/obj
 
+/ADarkAlley.Data/bin
+/ADarkAlley.Data/obj
+
 # just to be sure
 /ADarkAlley.DesktopGL/Content/bin
 /ADarkAlley.DesktopGL/Content/obj
+
+# misc
+/.vscode

@@ -29,5 +29,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ADarkAlley.Shared\ADarkAlley.Shared.csproj" />
+    <ProjectReference Include="..\ADarkAlley.Data\ADarkAlley.Data.csproj" />
   </ItemGroup>
 </Project>

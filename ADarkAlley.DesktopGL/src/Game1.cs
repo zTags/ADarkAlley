@@ -1,6 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Collections.Generic;
+
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+
+using ADarkAlley.Data;
 
 namespace ADarkAlley.DesktopGL
 {
@@ -8,18 +12,23 @@ namespace ADarkAlley.DesktopGL
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private Dictionary<string, Level> _levels;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            _levels = new Dictionary<string, Level>();
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            _graphics.PreferredBackBufferHeight = 720;
+            _graphics.PreferredBackBufferWidth  = 1280;
+            _graphics.ApplyChanges();
+            
             base.Initialize();
         }
 
