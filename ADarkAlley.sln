@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADarkAlley.DesktopGL", "ADarkAlley.DesktopGL\ADarkAlley.DesktopGL.csproj", "{934F3440-E51C-4BF3-B01D-3D0A26488612}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADarkAlley.Shared", "ADarkAlley.Shared\ADarkAlley.Shared.csproj", "{FAF2C421-8E68-4C08-A42B-49086542DA7B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +14,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{934F3440-E51C-4BF3-B01D-3D0A26488612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{934F3440-E51C-4BF3-B01D-3D0A26488612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{934F3440-E51C-4BF3-B01D-3D0A26488612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{934F3440-E51C-4BF3-B01D-3D0A26488612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF2C421-8E68-4C08-A42B-49086542DA7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF2C421-8E68-4C08-A42B-49086542DA7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF2C421-8E68-4C08-A42B-49086542DA7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF2C421-8E68-4C08-A42B-49086542DA7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

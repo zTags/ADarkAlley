@@ -1,0 +1,11 @@
+/ADarkAlley.Shared/bin
+/ADarkAlley.Shared/obj
+/ADarkAlley.Shared/Content/bin
+/ADarkAlley.Shared/Content/obj
+
+/ADarkAlley.DesktopGL/bin
+/ADarkAlley.DesktopGL/obj
+
+# just to be sure
+/ADarkAlley.DesktopGL/Content/bin
+/ADarkAlley.DesktopGL/Content/obj
