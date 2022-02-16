@@ -14,8 +14,34 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Backgrounds/mainmenu.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Backgrounds/mainmenu.png
+
+#begin Fonts/Inconsolata-Light.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/Inconsolata-Light.spritefont
+
+#begin Fonts/Inconsolata-Regular.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/Inconsolata-Regular.spritefont
+
 #begin Levels/LevelIntro.xml
 /importer:XmlImporter
-/processor:PassThroughProcessor 
+/processor:PassThroughProcessor
 /build:Levels/LevelIntro.xml
 

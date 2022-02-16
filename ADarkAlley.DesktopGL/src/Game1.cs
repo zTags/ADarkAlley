@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System.Threading.Tasks;
+using System.Collections.Generic;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 using ADarkAlley.Data;
+using ADarkAlley.Shared;
 
 namespace ADarkAlley.DesktopGL
 {
@@ -13,6 +15,9 @@ namespace ADarkAlley.DesktopGL
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private Dictionary<string, Level> _levels;
+        private Dictionary<string, SpriteFont> _fonts;
+        private MainMenu _mainMenu;
+        private LoadingScreen _loadingScreen;
 
         public Game1()
         {
@@ -20,6 +25,7 @@ namespace ADarkAlley.DesktopGL
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             _levels = new Dictionary<string, Level>();
+            _fonts = new Dictionary<string, SpriteFont>();
         }
 
         protected override void Initialize()
@@ -28,13 +34,21 @@ namespace ADarkAlley.DesktopGL
             _graphics.PreferredBackBufferHeight = 720;
             _graphics.PreferredBackBufferWidth  = 1280;
             _graphics.ApplyChanges();
-            
+
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            _fonts.Add("Inconsolata-Light", Content.Load<SpriteFont>("Fonts/Inconsolata-Light"));
+            _loadingScreen = new LoadingScreen(_fonts["Inconsolata-Light"]);
+
+            Task.Run(() => {
+                // load the rest here
+                _loadingScreen.updateLoadingItem("Inconsolata Regular");
+                _fonts.Add("Inconsolata-Regular", Content.Load<SpriteFont>("Fonts/Inconsolata-Regular"));
+            });
 
             // TODO: use this.Content to load your game content here
         }
@@ -51,9 +65,13 @@ namespace ADarkAlley.DesktopGL
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
-            // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+
+            _loadingScreen.Draw(_spriteBatch);
+
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
