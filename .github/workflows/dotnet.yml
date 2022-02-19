@@ -23,7 +23,9 @@ jobs:
         dotnet-version: 3.1.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build
+    - name: Build the data project FIRST
+      run: dotnet build ADarkAlley.Data --no-restore
+    - name: build the rest of the project
       run: dotnet build --no-restore
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal
