@@ -24,7 +24,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build the data project FIRST
-      run: dotnet build ADarkAlley.Data --no-restore
+      run: dotnet build ADarkAlley.Data --no-restore -c Release
     - name: build the rest of the project
       run: dotnet build --no-restore
 #    - name: Test
